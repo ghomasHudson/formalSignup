@@ -1,0 +1,159 @@
+<html><head>
+		<title>Tabs demo</title>
+		<!-- includes -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script><style type="text/css"></style>
+			<script src="http://static.scripting.com/bootstrap/1.4.0/js/bootstrap-modal.js"></script>
+			<script src="http://static.scripting.com/bootstrap/1.4.0/js/bootstrap-tabs.js"></script>
+			<script src="http://static.scripting.com/bootstrap/1.4.0/js/bootstrap-buttons.js"></script>
+			<link href="http://static.scripting.com/bootstrap/1.4.0/bootstrap.css" rel="stylesheet">
+		</head>
+	<body>
+		<div class="divDemoBody">
+			<h1>Tabs demo</h1>
+			<p>A simple demo of <a href="http://twitter.github.com/bootstrap/javascript.html#tabs">tabs</a> in a modal dialog in <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.</p>
+			<p>I just adapted the example the Bootstrap guys provided to run on my world outline server. It worked immediately.</p>
+			<p>1/12/12 by DW</p>
+			<div id="tabsDemoDialog" class="modal hide fade">
+				<div class="modal-header">
+					<h3>Click on a tab for a strange trip.</h3>
+					</div>
+				<div class="modal-body">
+					<div class="divDialogElements">
+						<ul class="tabs" data-tabs="tabs">
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#profile">Profile</a></li>
+							<li><a href="#messages">Messages</a></li>
+							<li><a href="#settings">Settings</a></li>
+							</ul>
+						<div id="my-tab-content" class="tab-content">
+							<div class="active tab-pane" id="home">
+							<div class="form-group">
+								<fieldset>
+                                    <legend>Personal Information</legend>
+
+                                    <div class="form-group">
+                                        <label for="title">Title:</label>
+                                        <select name="title" class="form-control" ng-model="v.title">
+                                            <option value="Mr">Mr</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Miss">Miss</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Dr">Dr</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="fname">First Name:</label>
+                                        <input type="text" name="fName" size="25" value="" class="form-control" ng-model="v.fName">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lName">Surname:</label>
+                                        <input type="text" name="lName" size="25" value="" class="form-control" ng-model="v.lName">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth:</label>
+                                        <input type="date" name="dob" size="25" value="" class="form-control" ng-model="v.dob">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="address">Address:</label>
+                                        <textarea name="address" rows="6" cols="40" class="form-control" ng-model="v.address"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="telHome">Home tel:</label>
+                                        <input type="tel" name="telHome" size="25" value="" class="form-control" ng-model="v.telHome">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="telMob">Mobile:</label>
+                                        <input type="tel" name="telMob" size="25" value="" class="form-control" ng-model="v.telMob">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="telOther">Other tel:</label>
+                                        <input type="tel" name="telOther" size="25" value="" class="form-control" ng-model="v.telOther">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" size="25" value="" class="form-control" ng-model="v.email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="commPref">Preferred method of contact:</label>
+                                        <select name="commPref" class="form-control" ng-model="v.commPref">
+                                            <option value="telHome">Home tel</option>
+                                            <option value="telMob">Mobile</option>
+                                            <option value="telOther">Other tel</option>
+                                            <option value="email">Email</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="volunteeringType">In what capacity would you like to volunteer?</label>
+                                        <select name="volunteeringType" class="form-control" ng-model="v.volunteeringType">
+                                            <option value="support at events">Support at Events</option>
+                                            <option value="field work">Field Work</option>
+                                            <option value="monitoring/testing">Monitoring/Testing</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="availability">What days are you available to volunteer?</label>
+                                        <select name="availability" class="form-control" ng-model="v.availability">
+                                            <option value="weekdays">Weekdays</option>
+                                            <option value="weekends">Weekends</option>
+                                            <option value="both">Both</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="experience">Please list any relavant experience you may have:</label>
+                                        <textarea name="experience" rows="6" cols="120" placeholder="" class="form-control" ng-model="v.experience"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="medCond">Do you have any medical conditions/allergies that we should be aware about?</label>
+                                        <textarea name="medCond" rows="6" cols="120" placeholder="" class="form-control" ng-model="v.medCond"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastTetnus">If relevant, what date was you last Tetanus?</label>
+                                        <input type="date" name="lastTetnus" size="25" value="" class="form-control" ng-model="v.lastTetnus">
+                                        <span class="help-block">(if more than 10 years ago please consult your GP)</span>
+                                    </div>
+                                </fieldset>
+                                </div>
+								</div>
+							<div class="tab-pane" id="profile">
+								
+								</div>
+							<div class="tab-pane" id="messages">
+								
+								</div>
+							<div class="tab-pane" id="settings">
+							
+								</div>
+							<div class="tab-pane" id="fat">
+								
+								</div>
+							<div class="tab-pane" id="mdo">
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="modal-footer">
+					<a href="#" class="btn primary" onclick="okClicked ();">OK</a>
+					<a href="#" class="btn secondary" onclick="closeDialog ();">Cancel</a>
+					</div>
+				</div>
+			<div class="divButton">
+				<button data-controls-modal="tabsDemoDialog" data-backdrop="true" data-keyboard="true" class="btn danger" onmouseover="sandwich='pastrami';">Launch Modal</button>
+				</div>
+			</div>
+		
+</body></html>
